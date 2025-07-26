@@ -1,17 +1,15 @@
-const read = require ('readline-sync')
-const findBooks = require ('./controllers/findBooks')
-const listRecommendedBooks = require ('./controllers/listRecommendedBooks')
-const listSortedBooks = require ('./controllers/listSortedBooks')
-const listUnreadBooks = require ('./controllers/listUnreadBooks')
+const read = require('readline-sync')
+const findBooks = require('./controllers/findBooks')
+const listRecommendedBooks = require('./controllers/listRecommendedBooks')
+const listSortedBooks = require('./controllers/listSortedBooks')
+const listUnreadBooks = require('./controllers/listUnreadBooks')
 
-
-const answer =  read.question(`
+const answer = read.question(`
 ===================MENU====================
 1 - CATEGORY: Finding books for category
 2 - TO ORDER: Ordering books for pages quantity
 3 - RECOMMENDED: Finding recommended books
-4 - WISH LIST: Finding unred books 
-
+4 - WISH LIST: Finding unread books 
 5 - EXIT
 
 Type a number[1-5]:
@@ -19,16 +17,21 @@ Type a number[1-5]:
 
 switch(answer) {
     case '1':
-        findBooks()
-     break
+        findBooks();
+        break;
     case '2':
-       listSortedBooks()
-    break   
+        listSortedBooks();
+        break;   
     case '3':
-        listRecommendedBooks()
-    break
+        listRecommendedBooks();
+        break;
     case '4':
-        listUnreadBooks()
-    break    
-        
+        listUnreadBooks();
+        break;
+    case '5':
+        console.log('Goodbye!');
+        break;
+    default:
+        console.log('Invalid option. Please choose 1-5.');
+        break;
 }
