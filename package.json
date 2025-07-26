@@ -1,0 +1,23 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node projeto/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caroliinaasilva/bookstore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caroliinaasilva/bookstore/issues"
+  },
+  "homepage": "https://github.com/caroliinaasilva/bookstore#readme",
+  "description": "",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
