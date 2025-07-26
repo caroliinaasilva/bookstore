@@ -1,5 +1,8 @@
-const books = require ('./database')
 const read = require ('readline-sync')
+const findBooks = require ('./controllers/findBooks')
+const listRecommendedBooks = require ('./controllers/listRecommendedBooks')
+const listSortedBooks = require ('./controllers/listSortedBooks')
+const listUnreadBooks = require ('./controllers/listUnreadBooks')
 
 
 const answer =  read.question(`
@@ -12,9 +15,20 @@ const answer =  read.question(`
 5 - EXIT
 
 Type a number[1-5]:
-    
-
-
 `)
 
-console.log(answer)
+switch(answer) {
+    case '1':
+        findBooks()
+     break
+    case '2':
+       listSortedBooks()
+    break   
+    case '3':
+        listRecommendedBooks()
+    break
+    case '4':
+        listUnreadBooks()
+    break    
+        
+}
